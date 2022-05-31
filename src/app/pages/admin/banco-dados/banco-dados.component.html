@@ -1,0 +1,77 @@
+
+    <p-toast></p-toast>
+
+<div class="p-1">
+  <div *ngIf="view == 'table'">
+    <div class="p-datatable-striped">
+      <h4>
+        Banco de Dados
+        <button
+          type="button"
+          (click)="add()"
+          class="btn btn-outline-info btn-lg"
+        >
+          <i class="fa fa-plus-circle"></i>
+        </button>
+      </h4>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card tableList">
+          <p-table
+            [value]="bancoDadosList"
+            class="table table-hover"
+            styleClass="p-datatable-striped"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th>Nome</th>
+                <th>Versão</th>
+                <th>Password</th>
+                <th>Ações</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-bancoDados>
+              <tr>
+                <td>{{bancoDados.url}}</td>
+                <td>{{bancoDados.username}}</td>
+                <td>{{bancoDados.password}}</td>
+                <td>
+                  <p-button (click)="select(bancoDados)">
+                    <i class="fa fa-edit"></i>
+                  </p-button>
+                  <p-button (click)="remove(bancoDados)">
+                    <i class="fa fa-trash"></i>
+                  </p-button>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </div>
+  </div>
+    <p-card *ngIf="view == 'form'" status="success" header="Cadastro Bancos de Dados" >
+      <ng-template pTemplate="form">
+        <form [formGroup]="form">
+          <formly-form [model]="model" [fields]="fields" [form]="form">
+          </formly-form>
+        </form>
+      </ng-template>
+      <ng-template pTemplate="footer">
+        <p-button
+          [disabled]="!form.valid"
+          type="button"
+          (click)="save()"
+        >
+          <i class="fa fa-edit"></i>
+          {{ edit ? "Atualizar" : "Salvar" }}
+        </p-button>
+        <p-button type="button" (click)="cancel()">
+          <i class="fa fa-window-close"></i>
+          Cancelar
+        </p-button>
+      </ng-template>
+    </p-card>
+    </div>
+  

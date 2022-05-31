@@ -1,0 +1,51 @@
+.template {
+  color: #fff;
+ 
+}
+
+.buttonAccordion{
+  text-align: right;
+}
+.elevation {
+    width: 25%;
+    display: inline-block; /* Alteramos de inline para inline-block */
+    text-align: left;   
+  }
+
+  :host::ng-deep .accordion {
+    width: 45%;
+    display: inline-block; /* Alteramos de inline para inline-block */
+    text-align: start;
+    margin-left: 10rem;
+    margin-top: -15rem
+   
+  }
+  
+  .liAccordion{
+    margin-top: -8rem;
+  }
+  .liElevation{
+    margin-top: 8rem;
+  }
+  ol, ul, dl {
+    margin-top: -8rem;
+    margin-bottom: 1rem;
+}
+.p-col {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 6rem;
+}
+
+:host::ng-deep .p-inputtext {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: .70rem;
+  color: #495057;
+  background: #ffffff;
+  padding: 0.5rem 6.00rem;
+  border: 0px solid #ced4da;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+}

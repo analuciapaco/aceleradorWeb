@@ -1,0 +1,8 @@
+
+<img class="item" src="/assets/img/logoSpassu.png"  />
+
+   <button type="button" pButton pRipple icon="pi pi-bars" label="Menu" (click)="menu.toggle($event)"  ></button>
+ 
+ <p-menu #menu [popup]="true" [model]="itens"></p-menu>
+<router-outlet></router-outlet>
+  

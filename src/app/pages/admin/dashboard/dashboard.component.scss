@@ -1,0 +1,30 @@
+
+
+
+.sidebar-toggle {
+  padding-right: 1.25rem;
+  text-decoration: none;
+  color: var(--text-hint-color);
+  font-size: 3.5rem;
+}
+.buttonMenu{
+  display: block;
+}
+
+:host::ng-deep p-menubar {
+  justify-content: flex-start !important;
+  
+}
+.item {
+  justify-content: flex-start !important;
+
+}
+.p-button {
+margin: 0;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 1050px;
+}
+
+

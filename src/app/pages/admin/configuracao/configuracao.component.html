@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <body>
+    <ul class="template">
+      <li *ngIf="bancoDadosList != undefined" class="accordion liAccordion">
+        <div class="buttonAccordion">
+          <p-button type="button" [routerLink]="['/admin/dashboard/configuracao-banco-dados']">
+            + Adicionar Implementação
+          </p-button>
+       </div>
+        <app-panel [bancoDados]="bancoDadosList"
+        [fields]="fieldsBancoDados"
+        [model]="modelBancoDados"
+        [titulo]="nomeBancoDados"
+        ></app-panel>
+    
+        <br />
+        <p-accordion>
+          <p-accordionTab header="Segurança" [selected]="true">
+            <ng-template pTemplate="form">
+              <form [formGroup]="form">
+                <formly-form [model]="model" [fields]="fieldsSeguranca" [form]="form">
+                </formly-form>
+              </form>
+            </ng-template>
+          </p-accordionTab>
+        </p-accordion>       
+      </li>
+      <li *ngIf="clienteList != undefined" class="elevation liElevation">
+        <app-elevation [clientes]="clienteList" [fields]="fields">
+        </app-elevation>   
+        
+      </li>      
+    </ul>
+  </body>
+</html>

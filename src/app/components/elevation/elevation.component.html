@@ -1,0 +1,26 @@
+<div class="p-grid">
+  <div class="p-col">
+    <div [class]="'box p-shadow-8'">
+      <p-card  status="success" header="">
+        
+        <h4>Configurar Projeto</h4>
+        <label>Preencha todos os campos</label>
+        
+        <hr>
+        <ng-template pTemplate="form">
+          <form [formGroup]="form">
+            <formly-form [model]="model" [fields]="fields" [form]="form">
+            </formly-form>
+          </form>
+        </ng-template>
+        <ng-template pTemplate="footer">
+         
+            <button pButton pRipple type="button" label="Gerar Projeto" class="p-button-raised p-button-secondary p-button-text">
+            </button>
+        
+         </ng-template>
+      </p-card>
+     
+    </div>
+  </div>
+</div>

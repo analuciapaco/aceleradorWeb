@@ -1,0 +1,17 @@
+<p-accordion>
+    <p-accordionTab header={{tituloBancoDados}} [selected]="true">
+      <ng-template pTemplate="icons">
+        <button pButton class="p-panel-header-icon p-link" icon="pi pi-cog">
+        </button>
+        
+    </ng-template>
+        <ng-template pTemplate="form">
+          <button pButton class="p-panel-header-icon p-link" icon="pi pi-cog">
+          </button>
+            <form [formGroup]="form">
+              <formly-form [model]="model" [fields]="fields" [form]="form">
+              </formly-form>
+            </form>
+          </ng-template>
+    </p-accordionTab>
+</p-accordion>

@@ -1,0 +1,16 @@
+<p-panel header="{{ titulo }}">
+  <ng-template pTemplate="icons">
+    <button type="button" class="btn btn-outline-info btn-lg">
+      <img class="item" src="/assets/img/icons/Edit_24px.svg" />
+    </button>
+    <button type="button" class="btn btn-outline-info btn-lg">
+      <img class="item" src="/assets/img/icons/delete_forever_24px.svg" />
+    </button>
+  </ng-template>
+  <ng-template pTemplate="form">
+    <form [formGroup]="form">
+      <formly-form [model]="model" [fields]="fields" [form]="form">
+      </formly-form>
+    </form>
+  </ng-template>
+</p-panel>
